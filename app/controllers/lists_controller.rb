@@ -16,26 +16,6 @@ class ListsController < ApplicationController
     end
     # Bookmark.where(params[:id])
     # @movies = Movie.where { |m| m.id == @bookmark}
-
-    # List id: 1
-
-    # go through each bookmark, get associated movie ID
-    # select those movies
-
-
-    # .where ("column" = "paris") - gives you a list in an array
-    # get the movies assigned to the list
-    # the movies should be associated with a list!
-    # because the list has many movies through bookmarks
-    # i should be able to grab where bookmark.list_id
-
-    # how do i know if a movie is inside of list?
-    # it should be bookmarked
-    # doctor has many appointments
-    # list appointments for doctor
-    # find all appointments with doctor_id = 1
-    # find all bookmarks with list_id = x
-    # get associated movies in those bookmarks
   end
 
   def new

@@ -2,7 +2,10 @@
 
 
 <% @bookmarks.each do |b|  %>
-
-<%= Movie.find(params[@bookmark.movie_id]) %>
-<%= b.comment %>
+<div>
+  <%= b.movie_id %>
+  <%= b.list_id %>
+  <%= b.comment %>
+</div>
 <% end %>
+<%= link_to "home", "/lists" %>

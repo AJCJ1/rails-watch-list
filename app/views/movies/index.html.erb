@@ -3,7 +3,9 @@
 
 
 <% @movies.each do |m|  %>
-<div><%= link_to m.title, "/movies/#{m.id}" %></div>
+<div>
+  <h3><%= link_to m.title, "/movies/#{m.id}" %></h3>
+</div>
 <% end %>
 
 <%= link_to "Back to Lists", "/lists" %>
