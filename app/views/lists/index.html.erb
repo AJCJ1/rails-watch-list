@@ -1,0 +1,27 @@
+<h1>Your Lists</h1>
+
+
+
+<% @lists.each do |l|  %>
+<div><%= link_to l.name, "/lists/#{l.id}" %></div>
+<% end %>
+
+<%= link_to "Create List", "/lists/new" %>
+<%= link_to "See Bookmarked", "/bookmarks/index" %>
+
+
+<%#
+
+list 1
+
+movie *
+movie *
+movie *
+
+
+movie
+movie
+movie
+movie
+
+ %>

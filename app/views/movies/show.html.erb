@@ -1,0 +1,17 @@
+<div class="w-100 border">
+
+  <div class="p-5 container card d-flex align-text-center justify-content-center">
+    <div>
+      <%= @movie.title.capitalize %>
+    </div>
+    <div>
+      <%= @movie.overview %>
+    </div>
+  </div>
+</div>
+
+
+
+
+<%# <%= link_to "Bookmark", "/lists/#{id}/bookmarks/new" %>
+<%= link_to "Go back", "/lists" %>

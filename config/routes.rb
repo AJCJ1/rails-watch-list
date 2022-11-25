@@ -3,4 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  resources :movies, only: %i[index show]
+  resources :lists, only: %i[new create index show] do
+    resources :bookmarks, only: %i[new create index show]
+  end
+
+  resources :bookmarks, only: %i[index]
 end

@@ -1,0 +1,8 @@
+<h1> All Bookmarked Movies: </h1>
+
+
+<% @bookmarks.each do |b|  %>
+
+<%= Movie.find(params[@bookmark.movie_id]) %>
+<%= b.comment %>
+<% end %>

@@ -1,0 +1,17 @@
+<h1>List:
+<%= @list.name.capitalize %>
+
+<% @bookmarks.each do |b|  %>
+<div>
+Movies:
+<% @movies.each do |m| %>
+<%= link_to m.title, "/movies/#{m.id}" %>
+<% end %>
+</div>
+<% end %>
+</h1>
+
+
+
+<%# <%= link_to "Bookmark", "/lists/#{id}/bookmarks/new" %>
+<%= link_to "Go back", "/lists" %>
