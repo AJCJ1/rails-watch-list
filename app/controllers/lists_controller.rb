@@ -2,6 +2,9 @@ class ListsController < ApplicationController
 
   def index
     @lists = List.all
+    if List.all.nil?
+      @message = "You've got no lists, why dont you make one?"
+    end
   end
 
   def show
