@@ -2,7 +2,7 @@ class ListsController < ApplicationController
 
   def index
     @lists = List.all
-    if List.all.nil?
+    if @lists.empty?
       @message = "You've got no lists, why dont you make one?"
     end
   end
@@ -30,6 +30,10 @@ class ListsController < ApplicationController
     @list.save
 
     redirect_to lists_path
+  end
+
+  def delete
+
   end
 
   private
