@@ -1,3 +1,8 @@
+<div class="navbar bg-black">
+  <%= link_to "Create List", "/lists/new" %>
+  <%= link_to "See Bookmarked", "/bookmarks/index" %>
+  <%= link_to "See All Movies", "/movies" %>
+</div>
 <h1>Your Lists</h1>
 
 
@@ -5,9 +10,6 @@
 <% @lists.each do |l|  %>
 <div><%= link_to l.name, "/lists/#{l.id}" %></div>
 <% end %>
-
-<%= link_to "Create List", "/lists/new" %>
-<%= link_to "See Bookmarked", "/bookmarks/index" %>
 
 
 <%#

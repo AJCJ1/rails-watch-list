@@ -1,12 +1,22 @@
+
+
+
+
 <div class="w-100 border">
 
-  <div class="p-5 container card d-flex align-text-center justify-content-center">
-    <div>
-      <%= @movie.title.capitalize %>
+  <div class="p-5 card d-flex">
+    <div class="text w-50">
+      <div>
+       Title: <%= @movie.title.capitalize %>
+      </div>
+      <div>
+       Overview: <%= @movie.overview %>
+      </div>
+      <div>
+        Rating: <%= @movie.rating %>
+      </div>
     </div>
-    <div>
-      <%= @movie.overview %>
-    </div>
+    <img src=<%=@movie.poster_url%> width="250px">
   </div>
 </div>
 

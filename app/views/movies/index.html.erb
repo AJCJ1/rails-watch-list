@@ -1,0 +1,27 @@
+<h1>All Movies:</h1>
+
+
+
+<% @movies.each do |m|  %>
+<div><%= link_to m.title, "/movies/#{m.id}" %></div>
+<% end %>
+
+<%= link_to "Back to Lists", "/lists" %>
+
+
+
+<%#
+
+list 1
+
+movie *
+movie *
+movie *
+
+
+movie
+movie
+movie
+movie
+
+ %>
