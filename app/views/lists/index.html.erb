@@ -1,16 +1,42 @@
-<div class="navbar bg-black">
-  <%= link_to "Create List", "/lists/new" %>
-  <%= link_to "Delete List", "/lists/delete" %>
-  <%= link_to "See All Movies", "/movies" %>
-  <%= link_to "Bookmarks", "/bookmarks" %>
+<nav class="navbar navbar-expand-lg navbar-cust">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="#">Movies</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "Create List", "/lists/new", class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Delete List", "/lists/delete", class:"nav-link"  %></a>
+        </li>
+        <li class="nav-item">
+          <%= link_to "See All Movies", "/movies", class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Bookmarks", "/bookmarks", class:"nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 </div>
-<h1>Your Lists</h1>
-<%= @message %>
 
-
-<% @lists.each do |l|  %>
-<div><%= link_to l.name, "/lists/#{l.id}" %></div>
-<% end %>
+<div class="view-container d-flex flex-column justify-content-center align-items-center">
+  <h1 class="p-4">Your Playlists</h1>
+  <%= @message %>
+  <div class="container d-flex custom-list">
+    <ul class="list-group-flush">
+  <% @lists.each do |l|  %>
+        <li class="list-group-item p-3">
+          <%= link_to l.name, "/lists/#{l.id}", class:"list-group-item"%>
+        </li>
+  <% end %>
+    </ul>
+  </div>
+</div>
 
 
 <%#

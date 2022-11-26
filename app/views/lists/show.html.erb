@@ -1,3 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-cust">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="#">Movies</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "Create List", "/lists/new", class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Delete List", "/lists/delete", class:"nav-link"  %></a>
+        </li>
+        <li class="nav-item">
+          <%= link_to "See All Movies", "/movies", class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Bookmarks", "/bookmarks", class:"nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
 <h1>List:
 <%= @list.name.capitalize %>
 
@@ -6,11 +32,12 @@
 Movies:
 <% @movies.each do |m| %>
 <%= link_to m.title, "/movies/#{m.id}" %>
+<img src="<%=m.poster_url%>" alt="<%m.title%>" class="img-cust"></img>
 <% end %>
 </div>
 <% end %>
 </h1>
 
 
-<h5> <%= link_to "Add Movie to List", "/lists/#{@list.id}/bookmarks/new"%>
+<h5> <%= link_to "Add to Playlist", "/lists/#{@list.id}/bookmarks/new"%>
 <%= link_to "Go back", "/lists" %>

@@ -1,6 +1,8 @@
-.navbar-lewagon {
+.navbar-cust {
   justify-content: space-between;
-  background: white;
+  background: $light-brown;
+  position:sticky;
+  top:0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +11,30 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-nav {
+  margin-top: 5px;
+}
+
+.navbar-brand {
+  color: $night;
+}
+
+.nav-item {
+  margin-top: 2px;
+}
+
+.nav-link {
+  color: $night;
+  text-decoration: none;
+  padding-left: 15px;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: $night;
+  text-decoration: none;
+  transition: 0.3s ease;
+  color: $light-brown;
 }
