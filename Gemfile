@@ -33,7 +33,9 @@ gem "font-awesome-sass", "~> 6.1"
 
 gem "simple_form", github: "heartcombo/simple_form"
 
-gem "dotenv-rails", groups: [:development, :test]
+gem "dotenv-rails", groups: [:development, :test] # adds .env gem to add the file for hidden API keys
+
+gem "cloudinary"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
